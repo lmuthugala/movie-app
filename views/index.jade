@@ -1,0 +1,16 @@
+extends layout
+block content    
+    include ./navbar.jade
+    div.container
+        div.row
+            div.col-sm-12
+                h1 Now Playing.
+            div.col-sm-12
+                each movie in parsedData
+                    div.col-md-3.col-sm-4.poster
+                        a(href="/movie/"+movie.id)
+                            img(src=imageBaseUrl + movie.poster_path, alt="movie image")
+                
+            
+
+

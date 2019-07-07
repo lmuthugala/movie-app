@@ -1,0 +1,21 @@
+nav.navbar.navbar-default
+    div.container-fluid
+        div.navbar-header
+            a(class="navbar-brand" href="/") The New IMDB
+        ul.nav.navbar-nav
+            li
+                a(href="login") Login
+            li
+                a(href="/favorites") Favorites
+        ul.nav.navbar-nav.navbar-right
+            li
+                form#search-form.form-inline(action="/search?source=hp" method='post')
+                    div.form-group
+                        select#cat.form-control(name='cat')
+                            option(value='movie') Movie Title
+                            option(value='person') Actor
+                        input#movie(type='text', placeholder='Search', name='movieSearch')
+                        input.btn.btn-primary(type='submit')
+
+            
+            
